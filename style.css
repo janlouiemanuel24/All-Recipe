@@ -1,0 +1,256 @@
+/*all style*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000;
+	height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(245, 246, 252, 0.52), rgba(122, 20, 35, 0.73)), url(./img/background.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    
+}
+
+/*Navigation*/
+.nav {
+	height: 65px;
+	display: flex;
+    margin: 30px 30px 0;
+}
+
+/*logo*/
+.logo {
+	width: 150px;
+	height: 65px;
+    margin-left: 20px;
+
+}
+
+ul {
+	display: flex;
+	list-style: none;
+    float: left;
+    margin: auto;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+}
+li
+{
+    margin: auto;
+}
+
+li a {
+	padding: 1rem 2rem 1.15rem;
+	text-transform: uppercase;
+	cursor: pointer;
+	color: #000;
+	text-align: center;
+	min-width: 80px;
+    margin: auto;
+    text-decoration: none;
+}
+
+li a:hover {
+	background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+	background-size: 100% 100%;
+	color: #fff;
+	animation: spring 300ms ease-out;
+	text-shadow: 0 -1px 0 #ef816c;
+	font-weight: bold;
+}
+
+li a:active {
+	transform: translateY(4px);
+}
+
+@keyframes spring {
+	15% {
+		transform-origin: center center;
+		transform: scale(1.2, 1.1);
+	}
+	40% {
+		transform-origin: center center;
+		transform: scale(0.95, 0.95);
+	}
+	75% {
+		transform-origin: center center;
+		transform: scale(1.05, 1);
+	}
+	100% {
+		transform-origin: center center;
+		transform: scale(1, 1);
+	}
+}
+
+
+/* for responsiveness */
+
+@media screen and (max-width: 768px) {
+    body
+    {
+        height: 104vh;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+
+    .toggle-line {
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        margin-bottom: 5px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .btn.open
+    {
+        margin-top: 50px;
+        transition: none;
+    }
+
+    .menu li {
+        padding: 1rem;
+        min-width: unset;
+        width: 100%;
+        text-align: center;
+    }
+    .logo
+    {
+        width: 200px;
+        height: 110px;
+    }
+    ul
+    {
+        margin: auto;
+    }
+    
+    .button
+    {
+        width: 300px;
+    }
+
+}
+
+/*BUTTON*/
+
+button {
+    border: none;
+    padding: 20px 40px;
+    font-size: 20px;
+    position: absolute; /* Change position to absolute */
+    top: 50%; /* Set top position to 50% */
+    left: 50%; /* Set left position to 50% */
+    transform: translate(-50%, -50%); /* Add transform property to center the button */
+    background: transparent;
+    color: #ff4d00;
+    text-transform: uppercase;
+    border: 3px solid #ff4d00;
+    cursor: pointer;
+    transition: all 0.7s;
+    overflow: hidden;
+    border-radius: 100px;
+    width: 250px;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    height: 70px;
+}
+
+button:hover {
+    color: #fff;
+}
+
+span {
+    transition: all 0.7s;
+    z-index: -1;
+}
+
+button .first {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background: #ff4d00;
+}
+
+button:hover .first {
+    top: 0;
+    right: 0;
+}
+
+button .second {
+    content: "";
+    position: absolute;
+    left: 25%;
+    top: -100%;
+    height: 100%;
+    width: 25%;
+    background: #ff4d00;
+}
+
+button:hover .second {
+    top: 0;
+    left: 50%;
+}
+
+button .third {
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    top: 100%;
+    width: 25%;
+    background: #ff4d00;
+}
+
+button:hover .third {
+    top: 0;
+    left: 25%;
+}
+
+button .fourth {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    width: 25%;
+    background: #ff4d00;
+}
+
+button:hover .fourth {
+    top: 0;
+    left: 0;
+}
